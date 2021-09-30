@@ -46,6 +46,10 @@ public class ByteGrayColor implements GrayColor {
         return Double.compare(this.getLuminosity(), o.getLuminosity());
     }
 
+    public GrayColor invert(){
+        return null;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

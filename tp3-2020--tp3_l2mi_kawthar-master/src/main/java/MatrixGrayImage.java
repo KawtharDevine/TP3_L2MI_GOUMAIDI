@@ -18,39 +18,40 @@ public class MatrixGrayImage implements GrayImage {
     @Override
     public void setPixel(GrayColor gray, int x, int y) {
         // TODO : Compléter la méthode pour modifier le pixel.
+        pixels[x][y] = gray;
     }
 
     @Override
     public GrayColor getPixelGrayColor(int x, int y) {
         // TODO : Changer les instructions pour retourner le bon pixel.
-        return new ByteGrayColor();
+        return this.pixels[x][y];
     }
 
     @Override
     public Color getPixelColor(int x, int y) {
         // TODO : Changer les instructions pour retourner la couleur du pixel.
-        return Color.WHITE;
+        return this.pixels[x][y].getColor();
     }
 
     @Override
     public int getWidth() {
         // TODO : Changer les instructions pour retourner la largeur de l'image.
-        return 600;
+        return width;
     }
 
     @Override
     public int getHeight() {
         // TODO : Changer les instructions pour retourner la hauteur de l'image.
-        return 400;
+        return height;
     }
 
     public MatrixGrayImage(int width, int height){
         /* TODO : Modifier les instructions pour initialiser correctement
             les propriétés de l'instance.
          */
-        this.width = 0;
-        this.height = 0;
-        this.pixels = null;
+        this.width = width;
+        this.height = height;
+        this.pixels = new GrayColor[width][height];
     }
 
 

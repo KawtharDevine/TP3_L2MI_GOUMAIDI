@@ -30,7 +30,7 @@ public class ByteGrayColor implements GrayColor {
     @Override
     public double getLuminosity() {
         // TODO : Retourner la luminosité de la couleur (entre 0 noir et 1 blanc)
-        return grayLevel;
+        return grayLevel/(double) MAXIMUM_GRAY_LEVEL;
     }
 
     @Override

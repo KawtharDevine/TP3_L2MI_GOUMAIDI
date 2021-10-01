@@ -46,8 +46,9 @@ public class ByteGrayColor implements GrayColor {
         return Double.compare(this.getLuminosity(), o.getLuminosity());
     }
 
+    @Override
     public GrayColor invert(){
-        return null;
+        return new ByteGrayColor(MAXIMUM_GRAY_LEVEL-this.grayLevel);
     }
 
     @Override

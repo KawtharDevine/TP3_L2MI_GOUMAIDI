@@ -13,6 +13,9 @@ public class ByteGrayColor implements GrayColor {
 
     private final double grayLevel;
 
+    public static final int NOIR=0;
+    public static final int BLANC=1;
+
     public ByteGrayColor(){
         this.grayLevel = MINIMUM_GRAY_LEVEL;
     }

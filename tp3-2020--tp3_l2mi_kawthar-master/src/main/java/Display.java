@@ -22,9 +22,12 @@ public class Display implements Initializable {
         this.image = MatrixGrayImage.createImageFromPGMFile("images/luminy.pgm");
         // TODO : Ajouter les transformations d'image.
         //new Invert().applyTo(image);
-        //new DecreaseGrayLevels(5).applyTo(image);
-        new Outline(0.055).applyTo(image);
-        System.out.println("jeis");
+        //new DecreaseGrayLevels(200).applyTo(image);
+        //new Outline(0.055).applyTo(image);
+        /*
+        Transform[] transforms = {new DecreaseGrayLevels(150),new Outline(0.05),new Invert()};
+        new CompositeTransform(transforms).applyTo(image);
+        */
         render();
     }
 

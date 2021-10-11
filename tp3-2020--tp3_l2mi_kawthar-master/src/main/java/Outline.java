@@ -13,7 +13,7 @@ public class Outline implements Transform{
     public void applyTo(GrayImage image) {
         for (int i = 0; i < image.getWidth()-1; i++) {
             for (int j = 0; j < image.getHeight()-1; j++) {
-                System.out.println(Math.abs(image.getPixelGrayColor(i, j).getLuminosity()-image.getPixelGrayColor(i+1, j).getLuminosity()));
+                //System.out.println(Math.abs(image.getPixelGrayColor(i, j).getLuminosity()-image.getPixelGrayColor(i+1, j).getLuminosity()));
                 if (Math.abs(image.getPixelGrayColor(i, j).getLuminosity()-image.getPixelGrayColor(i+1, j).getLuminosity()) > threshold){
                     image.setPixel(new ByteGrayColor(0), i, j);
                     //System.out.println("image1");
@@ -28,18 +28,4 @@ public class Outline implements Transform{
         }
         //System.out.println("FINISH !!!!!");
     }
-
-    /*
-    if (Math.abs(image.getPixelGrayColor(i, j).compareTo(image.getPixelGrayColor(i+1, j))) > threshold ){
-                    image.setPixel(new ByteGrayColor(0), i,j);
-                } if (Math.abs(image.getPixelGrayColor(i, j).compareTo(image.getPixelGrayColor(i, j+1))) > threshold){
-                    image.setPixel(new ByteGrayColor(0), i,j);
-                }
-                if (Math.abs(image.getPixelGrayColor(i, j).compareTo(image.getPixelGrayColor(i+1, j))) <= threshold ) {
-                    if (Math.abs(image.getPixelGrayColor(i, j).compareTo(image.getPixelGrayColor(i, j + 1))) <= threshold) {
-                        image.setPixel(new ByteGrayColor(255), i, j);
-
-                    }
-                }
-     */
 }
